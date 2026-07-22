@@ -16,7 +16,7 @@ function App() {
   // Fetch books when the Search button is clicked
   const handleSearch = () => {
     if (search.trim() !== "") {
-      setHasSearched(true); // NEW: Remember that the user searched
+      setHasSearched(true);
       fetchBooks(search);
     }
   };
