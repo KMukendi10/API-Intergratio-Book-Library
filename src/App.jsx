@@ -7,12 +7,16 @@ function App() {
   // Stores the user's search input
   const [search, setSearch] = useState("");
 
+  // NEW: Tracks whether the user has performed a search
+  const [hasSearched, setHasSearched] = useState(false);
+
   // Get data and functions from the custom hook
   const { books, loading, error, fetchBooks } = useBooks();
 
   // Fetch books when the Search button is clicked
   const handleSearch = () => {
     if (search.trim() !== "") {
+      setHasSearched(true); // NEW: Remember that the user searched
       fetchBooks(search);
     }
   };
@@ -45,8 +49,8 @@ function App() {
       {/* Display an error message if the API request fails */}
       {error && <p className="error">{error}</p>}
 
-      {/* Display a message if no books are found */}
-      {!loading && books.length === 0 && (
+      {/* NEW: Only show this after the user has searched */}
+      {hasSearched && !loading && books.length === 0 && (
         <p className="no-results">
           No books found. Try another search.
         </p>
