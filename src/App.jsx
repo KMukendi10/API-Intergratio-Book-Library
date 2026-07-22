@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import useBooks from "./hooks/useBooks";
+import BookCard from "./components/BookCard";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -31,6 +32,15 @@ function App() {
       {loading && <p>Loading books...</p>}
 
       {error && <p>{error}</p>}
+
+      <div className="books-container">
+        {books.map((book) => (
+          <BookCard
+            key={book.key}
+            book={book}
+          />
+        ))}
+      </div>
     </div>
   );
 }
