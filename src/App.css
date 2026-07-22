@@ -64,3 +64,16 @@ h1 {
 .book-card p {
   margin: 5px 0;
 }
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
