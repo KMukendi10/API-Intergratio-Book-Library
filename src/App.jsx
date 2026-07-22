@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import useBooks from "./hooks/useBooks";
 import BookCard from "./components/BookCard";
+import { Circles } from "react-loader-spinner";
 
 function App() {
   // Stores the user's search input
@@ -44,7 +45,11 @@ function App() {
       </div>
 
       {/* Display loading message while fetching data */}
-      {loading && <p>Loading books...</p>}
+      {loading && (
+        <div className="loader">
+          <Circles height="70" width="70" color="#2563eb" ariaLabel="loading"/>
+        </div>
+      )}
 
       {/* Display an error message if the API request fails */}
       {error && <p className="error">{error}</p>}
