@@ -27,6 +27,10 @@ function useBooks() {
     }
   }
 
+  useEffect(() => {
+      fetchBooks("react");
+    }, []);
+
   return {
     books,
     loading,
