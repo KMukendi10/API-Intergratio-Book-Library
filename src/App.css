@@ -25,6 +25,14 @@ h1 {
   color: #333;
 }
 
+/* Subtitle/Description */
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
 /* Search section */
 .search-container {
   display: flex;
@@ -124,4 +132,13 @@ h1 {
   color: #555;
   font-size: 18px;
   margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  color: #666;
+  font-size: 15px;
 }

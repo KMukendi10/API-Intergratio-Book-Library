@@ -8,7 +8,7 @@ function App() {
   // Stores the user's search input
   const [search, setSearch] = useState("");
 
-  // NEW: Tracks whether the user has performed a search
+  // Tracks whether the user has performed a search
   const [hasSearched, setHasSearched] = useState(false);
 
   // Get data and functions from the custom hook
@@ -24,7 +24,11 @@ function App() {
 
   return (
     <div className="app">
-      <h1>📚 Book Search App</h1>
+      <h1>📚 Book Library App</h1>
+
+      <p className="subtitle">
+        Search millions of books using the Open Library API.
+      </p>
 
       {/* Search input and button */}
       <div className="search-container">
@@ -67,6 +71,12 @@ function App() {
           <BookCard key={book.key} book={book} />
         ))}
       </div>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>Developed by Kazadi Mukendi © 2026</p>
+      </footer>
+
     </div>
   );
 }
