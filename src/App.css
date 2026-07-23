@@ -21,15 +21,14 @@ body {
 }
 
 /* Hero section */
-/* Hero section */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
   background: #ffffff;
   padding: 30px 40px;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-bottom: 30px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
@@ -42,13 +41,13 @@ body {
 .hero h1 {
   font-size: 42px;
   color: #1d3557;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 }
 
 .subtitle {
   font-size: 22px;
   color: #444;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-weight: 600;
 }
 
@@ -66,8 +65,8 @@ body {
 }
 
 .hero-image img {
-  width: 170px;
-  height: auto;
+  width: 200px;
+  height: 200px;
 }
 
 /* Search section */
