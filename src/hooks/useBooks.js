@@ -6,13 +6,13 @@ function useBooks() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  async function fetchBooks(search) {
+  async function fetchBooks(search, page = 1) {
     setLoading(true);
     setError("");
 
     try {
       const response = await fetch(
-        `https://openlibrary.org/search.json?q=${search}`
+        `https://openlibrary.org/search.json?q=${search}&page=${page}`
       );
 
       if (!response.ok) {
