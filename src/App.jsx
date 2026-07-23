@@ -11,6 +11,9 @@ function App() {
   // Tracks whether the user has performed a search
   const [hasSearched, setHasSearched] = useState(false);
 
+  // Track the current page of search results
+  const [page, setPage] = useState(1);
+
   // Get data and functions from the custom hook
   const { books, totalBooks, loading, error, fetchBooks } = useBooks();
 
