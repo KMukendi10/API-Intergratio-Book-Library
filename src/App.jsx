@@ -76,6 +76,16 @@ function App() {
         />
 
         <button onClick={handleSearch}>Search</button>
+
+        <button onClick={() => {
+          setSearch("");
+          setHasSearched(false);
+          setPage(1);
+          fetchBooks("react", 1);
+        }}
+        >
+          Clear
+        </button>
       </div>
 
       {/* Count the number of books found */}

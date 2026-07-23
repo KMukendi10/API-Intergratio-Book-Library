@@ -193,3 +193,12 @@ body {
   background-color: #cccccc;
   cursor: not-allowed;
 }
+
+/* Style the Clear button */
+.search-container button:last-child {
+  background-color: #6b7280;
+}
+
+.search-container button:last-child:hover {
+  background-color: #4b5563;
+}
