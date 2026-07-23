@@ -27,7 +27,8 @@ function App() {
       <h1>📚 Book Library App</h1>
 
       <p className="subtitle">
-        Search millions of books using the Open Library API.
+        Search millions of books using the Open Library API.<br></br>
+        Type a title, author, or subject below.
       </p>
 
       {/* Search input and button */}
