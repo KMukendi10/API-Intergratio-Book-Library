@@ -17,6 +17,9 @@ function App() {
   // Get data and functions from the custom hook
   const { books, totalBooks, loading, error, fetchBooks } = useBooks();
 
+  // Calculate the total number of pages (100 books per page)
+  const totalPages = Math.ceil(totalBooks / 100);
+
   // Fetch books when the Search button is clicked
   const handleSearch = () => {
     if (search.trim() !== "") {
@@ -29,7 +32,7 @@ function App() {
   // Go to the next page
   const handleNextPage = () => {
     const nextPage = page + 1;
-    
+
     setPage(nextPage);
     fetchBooks(search || "react", nextPage);
   };
@@ -114,10 +117,10 @@ function App() {
         </button>
 
         <span className="page-number">
-          Page {page}
+          Page {page} of {totalPages}
         </span>
 
-        <button onClick={handleNextPage}>
+        <button onClick={handleNextPage} disabled={page === totalPages}>
           Next →
         </button>
       </div>
