@@ -29,8 +29,19 @@ function App() {
   // Go to the next page
   const handleNextPage = () => {
     const nextPage = page + 1;
+    
     setPage(nextPage);
     fetchBooks(search || "react", nextPage);
+  };
+
+  // Go to the previous page
+  const handlePreviousPage = () => {
+    if (page > 1) {
+      const previousPage = page - 1;
+
+      setPage(previousPage);
+      fetchBooks(search || "react", previousPage);
+    }
   };
 
   return (
@@ -96,8 +107,16 @@ function App() {
         ))}
       </div>
 
-      {/* Next and previous page buttons */}
+      {/* Next and previous page button */}
       <div className="pagination">
+        <button onClick={handlePreviousPage} disabled={page === 1}>
+          ← Previous
+        </button>
+
+        <span className="page-number">
+          Page {page}
+        </span>
+
         <button onClick={handleNextPage}>
           Next →
         </button>

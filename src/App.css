@@ -171,9 +171,25 @@ body {
   background-color: #2563eb;
   color: white;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .pagination button:hover {
   background-color: #1d4ed8;
+}
+
+/* Current page number */
+.page-number {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Disabled button */
+.pagination button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
 }
