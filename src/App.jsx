@@ -21,7 +21,8 @@ function App() {
   const handleSearch = () => {
     if (search.trim() !== "") {
       setHasSearched(true);
-      fetchBooks(search);
+      setPage(1);
+      fetchBooks(search, 1);
     }
   };
 
@@ -30,7 +31,7 @@ function App() {
 
       {/* Header */}
       <header className="header">
-        <h1>📚 Open Library Explorer</h1>
+        <h1>📚 Book Library Explorer</h1>
         
         <p className="subtitle">
           Search millions of books using the Open Library API.<br></br>
