@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
 function useBooks() {
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState([]);  
+  const [totalBooks, setTotalBooks] = useState(0); // Storing total number of books
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -20,6 +21,7 @@ function useBooks() {
 
       const data = await response.json();
       setBooks(data.docs);
+      setTotalBooks(data.numFound); // Update total number of books
     } catch (err) {
       setError(err.message);
     } finally {
@@ -33,6 +35,7 @@ function useBooks() {
 
   return {
     books,
+    totalBooks, // Return total number of books
     loading,
     error,
     fetchBooks,

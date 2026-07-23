@@ -12,7 +12,7 @@ function App() {
   const [hasSearched, setHasSearched] = useState(false);
 
   // Get data and functions from the custom hook
-  const { books, loading, error, fetchBooks } = useBooks();
+  const { books, totalBooks, loading, error, fetchBooks } = useBooks();
 
   // Fetch books when the Search button is clicked
   const handleSearch = () => {
@@ -56,7 +56,8 @@ function App() {
       {/* Count the number of books found */}
       {books.length > 0 && (
         <p className="results-count">
-          Showing {books.length} books for "<strong>{search || "react"}</strong>"
+          Showing {books.length} of {totalBooks.toLocaleString()} books for{" "}
+          <strong>"{search || "react"}"</strong>
         </p>
       )}
 
