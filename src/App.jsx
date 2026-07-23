@@ -24,12 +24,16 @@ function App() {
 
   return (
     <div className="app">
-      <h1>📚 Book Library App</h1>
 
-      <p className="subtitle">
-        Search millions of books using the Open Library API.<br></br>
-        Type a title, author, or subject below.
-      </p>
+      {/* Header */}
+      <header className="header">
+        <h1>📚 Open Library Explorer</h1>
+        
+        <p className="subtitle">
+          Search millions of books using the Open Library API.<br></br>
+          Type a title, author, or subject below.
+        </p>      
+      </header>
 
       {/* Search input and button */}
       <div className="search-container">
@@ -48,6 +52,13 @@ function App() {
 
         <button onClick={handleSearch}>Search</button>
       </div>
+
+      {/* Count the number of books found */}
+      {books.length > 0 && (
+        <p className="results-count">
+          Showing {books.length} books for "<strong>{search || "react"}</strong>"
+        </p>
+      )}
 
       {/* Display loading message while fetching data */}
       {loading && (
