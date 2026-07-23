@@ -15,22 +15,23 @@ body {
 
 /* Main container */
 .app {
-  max-width: 1300px;
+  max-width: 1250px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 25px;
 }
 
 /* Hero section */
+/* Hero section */
 .hero {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 50px;
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  align-items: center;
+  gap: 40px;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .hero-text {
@@ -39,10 +40,23 @@ body {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 42px;
   color: #1d3557;
-  margin-bottom: 15px;
-  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 22px;
+  color: #444;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.hero-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 26px;
+  max-width: 520px;
 }
 
 .hero-image {
@@ -52,23 +66,8 @@ body {
 }
 
 .hero-image img {
-  width: 250px;
-  height: 250px;
-  max-width: 100%;
-}
-
-/* Subtitle/Description */
-.subtitle {
-  color: #555;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.hero-description {
-  color: #777;
-  font-size: 16px;
-  line-height: 1.6;
-  max-width: 600px;
+  width: 170px;
+  height: auto;
 }
 
 /* Search section */
@@ -76,8 +75,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
+  gap: 12px;
+  margin: 25px 0;
   flex-wrap: wrap;
 }
 
@@ -98,11 +97,11 @@ body {
 
 /* Search input */
 .search-box input {
-  width: 350px;
-  padding: 10px 10px 10px 45px;
+  width: 420px;
+  padding: 12px 12px 12px 42px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  font-size: 13px;
+  font-size: 15px;
   outline: none;
 }
 
@@ -112,12 +111,12 @@ body {
 
 /* Buttons */
 .search-container button {
-  padding: 10px 20px;
+  padding: 12px 22px;
   border: none;
   border-radius: 10px;
   background-color: #2563eb;
   color: white;
-  font-size: 13px;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -154,8 +153,8 @@ body {
 }
 
 .book-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.15);
 }
 
 .book-card img {
@@ -166,12 +165,14 @@ body {
 }
 
 .book-card h3 {
-  margin: 15px 0 10px;
+  margin: 14px 0 10px;
+  font-size: 20px;
   color: #222;
 }
 
 .book-card p {
-  margin: 5px 0;
+  margin: 6px 0;
+  font-size: 14px;
   color: #555;
 }
 
@@ -222,17 +223,19 @@ body {
 .pagination {
   display: flex;
   justify-content: center;
-  margin: 30px 0;
+  align-items: center;
+  gap: 15px;
+  margin: 35px 0;
 }
 
 .pagination button {
-  padding: 10px 10px;
+  padding: 10px 18px;
   border: none;
   border-radius: 8px;
   background-color: #2563eb;
   color: white;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .pagination button:hover {
@@ -241,16 +244,84 @@ body {
 
 /* Current page number */
 .page-number {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
   color: #333;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
 }
 
 /* Disabled button */
 .pagination button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    width: 140px;
+    margin-top: 15px;
+  }
+
+  .search-box input {
+    width: 320px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .app {
+    padding: 15px;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .hero-image img {
+    width: 120px;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  .search-box input {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .search-container button {
+    width: 150px;
+  }
+
+  .books-container {
+    grid-template-columns: 1fr;
+  }
 }
