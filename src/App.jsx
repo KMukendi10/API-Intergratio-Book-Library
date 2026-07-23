@@ -3,6 +3,7 @@ import "./App.css";
 import useBooks from "./hooks/useBooks";
 import BookCard from "./components/BookCard";
 import { Circles } from "react-loader-spinner";
+import { FiSearch } from "react-icons/fi";
 
 function App() {
   // Stores the user's search input
@@ -62,7 +63,9 @@ function App() {
 
       {/* Search input and button */}
       <div className="search-container">
-        <input
+        <div className="search-box">
+          <FiSearch className="search-icon" />
+          <input
           type="text"
           placeholder="Search for a book..."
           value={search}
@@ -74,6 +77,7 @@ function App() {
             }
           }}
         />
+        </div>
 
         <button onClick={handleSearch}>Search</button>
 
