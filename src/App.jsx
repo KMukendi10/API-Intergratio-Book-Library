@@ -4,6 +4,7 @@ import useBooks from "./hooks/useBooks";
 import BookCard from "./components/BookCard";
 import { Circles } from "react-loader-spinner";
 import { FiSearch } from "react-icons/fi";
+import bookIllustration from "./assets/openBook.svg";
 
 function App() {
   // Stores the user's search input
@@ -52,13 +53,23 @@ function App() {
     <div className="app">
 
       {/* Header */}
-      <header className="header">
-        <h1>📚 Book Library Explorer</h1>
+      <header className="hero">
         
-        <p className="subtitle">
-          Search millions of books using the Open Library API.<br></br>
-          Type a title, author, or subject below.
-        </p>      
+        <div className="hero-text">
+          <h1>Book Library Explorer</h1>
+          
+          <p className="subtitle">
+            Discover millions of books from the Open Library database.
+          </p>
+
+          <p className="hero-description">
+            Type a title, author, or subject to find your next read.
+          </p>
+        </div>
+
+        <div className="hero-image">
+          <img src="./src/assets/openBook.svg" alt="Books illustration" />
+        </div>
       </header>
 
       {/* Search input and button */}
