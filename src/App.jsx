@@ -26,6 +26,13 @@ function App() {
     }
   };
 
+  // Go to the next page
+  const handleNextPage = () => {
+    const nextPage = page + 1;
+    setPage(nextPage);
+    fetchBooks(search || "react", nextPage);
+  };
+
   return (
     <div className="app">
 
@@ -87,6 +94,13 @@ function App() {
         {books.map((book) => (
           <BookCard key={book.key} book={book} />
         ))}
+      </div>
+
+      {/* Next and previous page buttons */}
+      <div className="pagination">
+        <button onClick={handleNextPage}>
+          Next →
+        </button>
       </div>
 
       {/* Footer */}
