@@ -45,15 +45,15 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to the book results after new books have loaded
+  // Scroll to the books section after searching or changing pages
   useEffect(() => {
-    if (!loading && books.length > 0 && booksRef.current) {
+    if (hasSearched && books.length > 0 && booksRef.current) {
       booksRef.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     }
-  }, [books, loading]);
+  }, [books, hasSearched]);
 
   // Fetch books when the Search button is clicked
   const handleSearch = () => {
