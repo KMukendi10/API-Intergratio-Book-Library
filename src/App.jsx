@@ -19,7 +19,7 @@ function App() {
   // Show or hide the Back to Top button
   const [showButton, setShowButton] = useState(false);
 
-  // Reference to the book results section
+  // Reference to the books section
   const booksRef = useRef(null);
 
   // Get data and functions from the custom hook
