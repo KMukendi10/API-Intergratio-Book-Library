@@ -1,26 +1,41 @@
 function BookCard({ book }) {
   return (
     <div className="book-card">
-      <img
-        src={
-          book.cover_i
-            ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
-            : "https://via.placeholder.com/150x220?text=No+Cover"
-        }
-        alt={book.title}
-      />
+      <div className="book-top">
+        <img
+          className="book-cover"
+          src={
+            book.cover_i
+              ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
+              : "https://via.placeholder.com/90x130?text=No+Cover"
+          }
+          alt={book.title}
+        />
 
-      <h3>{book.title}</h3>
+        <div className="book-info">
+          <p className="book-rating">★ 289 • H</p>
 
-      <p>
-        <strong>Author:</strong>{" "}
-        {book.author_name ? book.author_name[0] : "Unknown"}
-      </p>
+          <h3 className="book-title" title={book.title}>
+            {book.title}
+          </h3>
 
-      <p>
-        <strong>First Published:</strong>{" "}
-        {book.first_publish_year || "N/A"}
-      </p>
+          <p className="book-author">
+            {book.author_name ? book.author_name[0] : "Unknown Author"}
+          </p>
+        </div>
+      </div>
+
+      <div className="book-divider"></div>
+
+      <div className="book-footer">
+        <span>{book.first_publish_year || "N/A"}</span>
+
+        <span>
+          {book.edition_count
+            ? `${book.edition_count} editions`
+            : "1 edition"}
+        </span>
+      </div>
     </div>
   );
 }

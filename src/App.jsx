@@ -114,14 +114,14 @@ function App() {
       {/* Display loading message while fetching data */}
       {loading && (
         <div className="loader">
-          <Circles height="70" width="70" color="#2563eb" ariaLabel="loading"/>
+          <Circles height="70" width="70" color="#27292c" ariaLabel="loading"/>
         </div>
       )}
 
       {/* Display an error message if the API request fails */}
       {error && <p className="error">{error}</p>}
 
-      {/* NEW: Only show this after the user has searched */}
+      {/* Only show this after the user has searched */}
       {hasSearched && !loading && books.length === 0 && (
         <p className="no-results">
           No books found. Try another search.
