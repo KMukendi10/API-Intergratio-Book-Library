@@ -29,8 +29,9 @@ function useBooks() {
     }
   }
 
+  // Load some books when the app opens
   useEffect(() => {
-      fetchBooks("react");
+      fetchBooks("react", 1);
     }, []);
 
   return {
