@@ -1,16 +1,154 @@
-# React + Vite
+# 📚 Book Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive Book Library web application built with **React** and **Vite**. The application integrates with the Open Library API to allow users to search for books, browse popular titles, and view detailed information about each book.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **GitHub Pages:** https://kmukendi10.github.io/API-Intergratio-Book-Library/
 
-## React Compiler
+## 📂 GitHub Repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Repository:** https://github.com/KMukendi10/API-Intergratio-Book-Library
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 🔍 Search for books by title
+- 📖 Browse books from the Open Library API
+- 📚 Display book covers, titles, and authors
+- 📄 View detailed information about selected books
+- 📱 Fully responsive design for desktop, tablet, and mobile devices
+- ⚡ Fast performance using React and Vite
+- 🎨 Clean and modern user interface
+- ❌ Graceful error handling for failed API requests
+- ⏳ Loading indicator while fetching data
+
+---
+
+## 🛠️ Built With
+
+- React
+- Vite
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Open Library API
+
+---
+
+## 📁 Project Structure
+
+```
+API-Intergratio-Book-Library/
+│
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── index.css
+│
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/KMukendi10/API-Intergratio-Book-Library.git
+```
+
+Navigate into the project folder:
+
+```bash
+cd API-Intergratio-Book-Library
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🌐 API Used
+
+This project uses the **Open Library API** to retrieve book information.
+
+API Documentation:
+
+https://openlibrary.org/developers/api
+
+---
+
+## 🎯 Learning Objectives
+
+This project demonstrates:
+
+- Working with REST APIs
+- Fetching data asynchronously using Fetch API
+- React Components
+- React Hooks (`useState` and `useEffect`)
+- Conditional rendering
+- State management
+- Responsive web design
+- Error handling
+- Loading states
+
+---
+
+## 👨‍💻 Author
+
+**Kazadi Shadrack Mukendi**
+
+- GitHub: https://github.com/KMukendi10
+
+---
+
+## 📄 License
+
+This project is for educational purposes as part of the iHub Full Stack Web Development programme.
+
+---
+
+## 🙏 Acknowledgements
+
+- Open Library
+- React
+- Vite
+- iHub Full Stack Web Development Programme
