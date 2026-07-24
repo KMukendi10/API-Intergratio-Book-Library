@@ -90,9 +90,9 @@ function App() {
         />
         </div>
 
-        <button onClick={handleSearch}>Search</button>
+        <button onClick={handleSearch} disabled={loading}>{loading ? "Searching..." : "Search"}</button>
 
-        <button onClick={() => {
+        <button disabled={loading} onClick={() => {
           setSearch("");
           setHasSearched(false);
           setPage(1);

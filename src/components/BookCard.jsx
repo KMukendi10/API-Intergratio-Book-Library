@@ -9,6 +9,12 @@ function BookCard({ book }) {
               ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
               : "https://via.placeholder.com/90x130?text=No+Cover"
           }
+          /* Only load the image when it is close to the screen */
+          loading="lazy"
+          
+          /* Let the browser decode the image in the background */
+          decoding="async"
+
           alt={book.title}
         />
 
