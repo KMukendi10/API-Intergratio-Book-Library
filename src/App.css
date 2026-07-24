@@ -230,13 +230,20 @@ body {
   color: #6b6255;
 }
 
-/* Loading message */
-.loader,
-.loading {
+/* Loading section */
+.loader {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 40px 0;
+}
+
+/* Loading text */
+.loader p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 15px;
 }
 
 /* Error message */
@@ -255,13 +262,40 @@ body {
   margin-top: 20px;
 }
 
+/* Back to Top button */
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 12px 18px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-3px);
+}
+
 /* Footer */
 .footer {
-  text-align: center;
-  margin-top: 50px;
+  margin-top: 10px;
   padding: 20px;
+  padding-bottom: 0;
+  border-top: 1px solid #cfcfcf;
+  text-align: center;
   color: #666;
-  font-size: 15px;
+  font-size: 13px;
+}
+
+.footer p {
+  margin: 8px 0;
 }
 
 /* Results count */
