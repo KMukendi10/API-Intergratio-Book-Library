@@ -4,29 +4,32 @@ function BookCard({ book }) {
       <div className="book-top">
 
         {/* Display the book cover or a placeholder if none is available */}
-        <img
-          className="book-cover"
-          src={
-            book.cover_i
-              ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
-              : "https://via.placeholder.com/90x130?text=No+Cover"
-          }
+        {book.cover_i ? (
+          <img
+            className="book-cover"
+            src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
 
-          /* Only load the image when it is close to the screen */
-          loading="lazy"
+            /* Only load the image when it is close to the screen */
+            loading="lazy"
 
-          /* Let the browser decode the image in the background */
-          decoding="async"
+            /* Let the browser decode the image in the background */
+            decoding="async"
 
-          alt={book.title}
-        />
+            alt={book.title}
+          />
+        ) : (
+          <div className="book-cover no-cover">
+            No Cover
+          </div>
+        )}
 
         <div className="book-info">
 
           {/* Display the book language */}
-          {/* Display the book language */}
           <p className="book-language">
-            {book.language ? book.language[0].toUpperCase() : "Unknown Language"}
+            {book.language
+              ? book.language[0].toUpperCase()
+              : "Unknown"}
           </p>
 
           {/* Display the book title */}
